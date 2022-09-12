@@ -17,22 +17,22 @@ public class Apptabuada {
 		
 		
 		// TODO Auto-generated method stub
-//
-//		Tabuada tabuada = new Tabuada();
-//
-//		tabuada.multiplicado = 139;
-//		tabuada.minMultiplicador = 120;
-//		tabuada.maxMultiplicador = 1000;
-//
-//		String[] resultado = tabuada.getTabuada();
-//
-//		int contador = 0;
-//		
-//		while (contador < resultado.length) {
-//			System.out.println(resultado[contador]);
-//			contador++;
-//		
-//		}
+
+		Tabuada tabuada = new Tabuada();
+
+		tabuada.multiplicado = 139;
+		tabuada.minMultiplicador = 120;
+		tabuada.maxMultiplicador = 1000;
+
+		String[] resultado = tabuada.getTabuada();
+
+		int contador = 0;
+		
+		while (contador < resultado.length) {
+			System.out.println(resultado[contador]);
+			contador++;
+		
+		}
 		
 
 	

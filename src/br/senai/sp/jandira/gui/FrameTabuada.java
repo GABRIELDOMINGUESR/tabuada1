@@ -3,8 +3,11 @@ package br.senai.sp.jandira.gui;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
+import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -131,10 +134,11 @@ public class FrameTabuada {
 			public void actionPerformed(ActionEvent e) {
 
 				
-				lista.setForeground(Color.WHITE);
+				
 				textmultiplicando.setText("");
 				textMaximomultiplicador.setText("");
 				textminimultiplicando.setText("");
+				scroll.setVisible(false);
 				
 				
 				
@@ -144,9 +148,84 @@ public class FrameTabuada {
 		
 		
 		}); {
-
-			
 		
+		textmultiplicando.addKeyListener(new KeyListener() {
+			
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void keyReleased(KeyEvent e) {
+				textmultiplicando.setText(textmultiplicando.getText().replaceAll("[^0-9]", ""));
+				if(textmultiplicando.getText().length()> 9) {
+				
+					JOptionPane.showMessageDialog(null, "Valor excedido", "ERRO",JOptionPane.ERROR_MESSAGE);
+					textmultiplicando.setText(textmultiplicando.getText().replaceAll("[0-9]", ""));
+					
+				}
+			}
+			
+			@Override
+			public void keyPressed(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+
+		textminimultiplicando.addKeyListener(new KeyListener() {
+			
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void keyReleased(KeyEvent e) {
+				textminimultiplicando.setText(textminimultiplicando.getText().replaceAll("[^0-9]", ""));
+				if(textminimultiplicando.getText().length()> 9) {
+				
+					JOptionPane.showMessageDialog(null, "Valor excedido", "ERRO",JOptionPane.ERROR_MESSAGE);
+					textminimultiplicando.setText(textminimultiplicando.getText().replaceAll("[0-9]", ""));
+					
+				}
+			}
+			
+			@Override
+			public void keyPressed(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		textMaximomultiplicador.addKeyListener(new KeyListener() {
+			
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void keyReleased(KeyEvent e) {
+				textMaximomultiplicador.setText(textMaximomultiplicador.getText().replaceAll("[^0-9]", ""));
+				if(textMaximomultiplicador.getText().length()> 9) {
+				
+					JOptionPane.showMessageDialog(null, "Valor excedido", "ERRO",JOptionPane.ERROR_MESSAGE);
+					textMaximomultiplicador.setText(textMaximomultiplicador.getText().replaceAll("[0-9]", ""));
+					
+				}
+			}
+			
+			@Override
+			public void keyPressed(KeyEvent e) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 		
 
 			
